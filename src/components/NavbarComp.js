@@ -28,7 +28,7 @@ export default class NavbarComp extends Component {
           <Navbar.Brand>
           <img src={photo} width="30" height="30" className="d-inline-block align-top" alt="Logo" />
           </Navbar.Brand>
-          <Navbar.Brand as={Link} to={"/feed"}>HashImage</Navbar.Brand>
+          <Navbar.Brand as={Link} to={"/"}>HashImage</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
             <Nav >
