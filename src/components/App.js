@@ -25,11 +25,13 @@ class App extends Component {
     this.uploadImage = this.uploadImage.bind(this)
     this.tipImageOwner = this.tipImageOwner.bind(this)
     this.captureFile = this.captureFile.bind(this)
+  
   }
   
+
   async componentWillMount() {
-    await this.connectCeloWallet()
-    await this.loadBlockchainData()
+    this.connectCeloWallet()
+    this.loadBlockchainData()
   }
 
   async connectCeloWallet() {
@@ -45,6 +47,7 @@ class App extends Component {
       }
     } else {
       console.log("Please install the CeloExtensionWallet.")
+      window.alert('Celo Extension Wallet not installed! Please install Celo Extension Wallet')  
     }
   }
 
@@ -96,6 +99,7 @@ class App extends Component {
   }
 
   uploadImage = description => {
+    if (this.state.acount !== ''){
     console.log("Submitting file to ipfs...")
 
     ipfs.add(this.state.buffer, (error, result) => {
@@ -113,12 +117,21 @@ class App extends Component {
     }
     })
   }
+  else{
+    window.alert("Please connect your Celo Wallet to upload!")
+  }
+  }
 
   tipImageOwner = (id, tipAmount) => {
+    if (this.state.account !== ''){ 
     this.setState({ loading: true })
     this.state.Hashimage.methods.tipImageOwner(id).send({ from: this.state.account, value: tipAmount }).on('transactionHash', (hash) => {
       this.setState({ loading: false })
     })
+  }
+  else{
+    window.alert("Please connect your Celo Wallet to pay!")
+  }
   }
 
   setselectedImg = (url) => {
@@ -137,6 +150,7 @@ class App extends Component {
            unsortView = {this.unsortView}
            sortView = {this.sortView}
            account={this.state.account} 
+           connect = {this.connectCeloWallet}
            />
     );
   }

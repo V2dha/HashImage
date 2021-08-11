@@ -6,6 +6,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
+import Main from './Main';
 import ShowImage from './ShowImage';
 import UploadImage from './UploadImage';
 import photo from '../photo1.svg'
@@ -41,6 +42,9 @@ export default class NavbarComp extends Component {
     
     <div>
     <Switch>
+          <Route exact path="/">
+            <Main/>
+          </Route>
           <Route path="/feed">
             <div>
             <ShowImage
