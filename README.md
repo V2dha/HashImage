@@ -23,8 +23,6 @@
 </p>
 <hr>
 
-
-
 # Problem Statement
 Centralized image-sharing platform creators have full control over what content is shown to the user. These platforms have algorithms that effectively censor users by hiding certain content and sharing specific content to the users according to what the creator thinks is best and lacks transparency. 
 
@@ -33,9 +31,11 @@ Apart from this, various content creators often post their content in the form o
 # Project Working
 The idea is to create a Decentralized Image-Sharing application where content creators or users can earn in celo cryptocurrency by posting images in the form of art, photographs or even memes. 
 
-All the images uploaded are stored on a decentralized file storage system called IPFS so the images are be fully censorship-resistant and there is only one transparent algorithm that is defined in the smart contract and is immutable.
+All the images uploaded are stored on a decentralized file storage system called IPFS so the images are fully censorship-resistant and there is only one transparent algorithm that is defined in the smart contract and is immutable.
 
 After the image is posted, users can pay the content creators if they like the content using their celo wallet.
+
+Note : Users would need to install Celo Extension Wallet in order to access the site.
 
 # Screenshots
 <img src="/images/0.png">
@@ -50,4 +50,4 @@ After the image is posted, users can pay the content creators if they like the c
 * Truffle Suite
 * React.js
 * IPFS
-* Celo
+* Celo Extension Wallet and Celo Account
