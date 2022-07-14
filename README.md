@@ -35,7 +35,7 @@ All the images uploaded are stored on a decentralized file storage system called
 
 After the image is posted, users can pay the content creators if they like the content using their celo wallet.
 
-# Working
+# [Working](https://youtu.be/53u1cwjQQKo)
 - Users can log in to their celo extension wallet to connect celo wallet.
 - They can then choose to post images or view their feed and reward the creator of the image they like.
 - In case of post, the user can upload the image from their device which would be connected to the deployed smart contract and the images would get stored on IPFS and a hash corresponding to that particular image is returned which is thus displayed on the feed.
